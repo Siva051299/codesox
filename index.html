@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Slider</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Bootstrap CSS Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <!-- Bootstrap Script Links -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container-fluid header-body">
+      <div>
+        <nav class="container-fluid navbar navbar-light navbar-expand-lg">
+          <a href="#hero" class="navbar-brand">
+            <div class="header-logo-body">
+              <img class="header-logo-img" src="media/oh 1.png" alt="Logo" />
+            </div>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#mynavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse header-ul-body" id="mynavbar">
+            <div class="header-align-div"></div>
+            <ul class="navbar-nav nav_list header-ul">
+              <li class="nav-item">
+                <a href="#hero" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="#platforms" class="nav-link">Platforms</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <div class="header-button-box">
+              <a href="#contact" class="nav-link">
+                <button class="header-sign-button">Get in Touch</button>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+      <div class="overlay"></div>
+      <div class="content" id="slide-content">
+        <div class="label" id="slide-label"></div>
+        <h1 class="title" id="slide-title"></h1>
+        <p class="description" id="slide-desc"></p>
+        <div class="buttons">
+          <a href="#services" class="btn-primary">
+            <span> Explore Services </span>
+            <img src="assets/leftt-arrow.svg" alt="Arrow" />
+          </a>
+          <a href="#platforms" class="btn-secondary">View Our Work</a>
+        </div>
+      </div>
+      <div class="dots">
+        <div class="dot" onclick="setSlide(0)"></div>
+        <div class="dot" onclick="setSlide(1)"></div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section-1-about-section">
+      <div class="section-1-container" id="about">
+        <div class="section-1-grid-container">
+          <!-- Left Side Content -->
+          <div class="section-1-left-content">
+            <div class="section-1-text-indigo">
+              <span class="section-1-founded-date">
+                <img src="assets/rocket.svg" alt="Rocket" />
+                <span> FOUNDED OCTOBER 21, 2024 </span>
+              </span>
+            </div>
+
+            <h2 class="section-1-section-title">
+              Singapore's Fresh Approach to<br />
+              Brand Storytelling
+            </h2>
+
+            <div class="section-1-description-text">
+              <p>
+                Noblemist Media Pte Ltd is a bold new startup in Singapore's
+                competitive branding and advertising space. As a team of
+                forward-thinking creatives based in the heart of Southeast Asia,
+                we bring fresh perspectives that blend Eastern and Western
+                design philosophies.
+              </p>
+              <p>
+                Our founding team combines local market expertise with
+                international experience, creating a unique position to help
+                both Singaporean businesses expand globally and international
+                companies enter Asian markets. Though we're relatively new, our
+                nimble startup approach allows us to move quickly and adopt
+                innovative technologies that established agencies often miss.
+              </p>
+            </div>
+
+            <div class="section-1-process-section">
+              <div class="section-1-process-item">
+                <div class="section-1-icon-container">
+                  <img src="assets/search.svg" alt="Search" />
+                </div>
+                <div class="section-1-process-content">
+                  <h3 class="section-1-process-title">Discovery</h3>
+                  <p class="section-1-process-description">
+                    We dive deep into understanding your business, market, and
+                    audience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="section-1-process-item">
+                <div class="section-1-icon-container">
+                  <img src="assets/target.svg" alt="Target" />
+                </div>
+                <div class="section-1-process-content">
+                  <h3 class="section-1-process-title">Strategy</h3>
+                  <p class="section-1-process-description">
+                    We craft a tailored approach that aligns with your business
+                    objectives.
+                  </p>
+                </div>
+              </div>
+
+              <div class="section-1-process-item">
+                <div class="section-1-icon-container">
+                  <img src="assets/brush.svg" alt="Brush" />
+                </div>
+                <div class="section-1-process-content">
+                  <h3 class="section-1-process-title">Creation</h3>
+                  <p class="section-1-process-description">
+                    We bring your brand to life through design, messaging, and
+                    experiences.
+                  </p>
+                </div>
+              </div>
+
+              <div class="section-1-process-item">
+                <div class="section-1-icon-container">
+                  <img src="assets/settings.svg" alt="Settings" />
+                </div>
+                <div class="section-1-process-content">
+                  <h3 class="section-1-process-title">Optimization</h3>
+                  <p class="section-1-process-description">
+                    We continuously refine and improve based on data and
+                    feedback.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-1-location-info">
+              <div class="section-1-icon-container">
+                <img src="assets/people.svg" alt="People" />
+              </div>
+              <div class="section-1-location-content">
+                <p class="section-1-location-text">
+                  <b>Based in Singapore's Central Business District.</b> Visit
+                  our creative studio to discuss how we can help your brand
+                  succeed in Asian markets and beyond.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Image -->
+          <div class="section-1-image-container">
+            <img
+              src="https://i.postimg.cc/50MHk2Lp/Group-4-3.png"
+              alt="Singapore Office"
+              class="section-1-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-2-section">
+      <div class="section-2-container">
+        <div class="section-2-header">
+          <span class="section-2-tag">OUR SERVICES</span>
+          <h2 class="section-2-title">
+            Transform Your Brand with Our Expertise
+          </h2>
+          <p class="section-2-subtitle">
+            We offer comprehensive branding and advertising solutions to help
+            your business stand out in a crowded marketplace and connect with
+            your audience on a deeper level.
+          </p>
+        </div>
+
+        <div id="services-grid" class="section-2-grid"></div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section-5">
+      <div class="section-5-container">
+        <div class="section-5-grid">
+          <div class="section-5-text">
+            <h2 class="section-5-heading">Ready to elevate your brand?</h2>
+            <p class="section-5-subtext">
+              Schedule a consultation with our experts and discover how we can
+              help you achieve your branding goals.
+            </p>
+            <button class="section-5-button" onclick="bookConsultation()">
+              Book a Consultation
+            </button>
+          </div>
+          <div class="section-5-image">
+            <img
+              src="media/laptop-img.png"
+              alt="Design Team Working"
+              class="section-5-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <div id="platforms" class="platforms-body">
+      <div class="platforms-title-1">Platforms</div>
+      <div class="platforms-title-2">Our Advertising Platforms</div>
+      <div class="platforms-des">
+        A comprehensive advertising platform designed to help businesses thrive
+        in the Singapore market.
+      </div>
+      <div class="toggle-container">
+        <div class="toggle-highlight" id="toggleHighlight"></div>
+        <button class="toggle-button active" id="offlineBtn">
+          Offline Advertising
+        </button>
+        <button class="toggle-button" id="onlineBtn">Online Advertising</button>
+      </div>
+
+      <div class="platforms-content-box">
+        <div class="platforms-content-right">
+          <div class="platforms-content-right-title">Platforms</div>
+          <div class="platforms-content-right-btn-box"></div>
+        </div>
+        <div class="platforms-content-left">
+          <div class="platforms-content-left-title-box">
+            <img
+              src=""
+              class="platforms-content-left-title-img"
+              alt="Platform Icon"
+            />
+            <div class="platforms-content-left-title"></div>
+          </div>
+          <div class="platforms-content-left-des"></div>
+
+          <div
+            class="platforms-content-left-img-container"
+            style="position: relative"
+          >
+            <button
+              class="platforms-scroll-btn left"
+              onclick="scrollImages(-1)"
+            >
+              <img src="assets/left arrow.svg" />
+            </button>
+            <div class="platforms-content-left-img-body"></div>
+            <button
+              class="platforms-scroll-btn right"
+              onclick="scrollImages(1)"
+            >
+              <img src="assets/right arrow.svg" />
+            </button>
+          </div>
+
+          <div class="platforms-content-left-text-box">
+            <div class="platforms-content-left-text-box-1"></div>
+          </div>
+          <div class="platforms-button-left-srk-text-box-1">
+            <a href="#contact">
+              <button class="platforms-quote-button">Get a Quote</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-form-section">
+      <div class="contact-form-container">
+        <div class="contact-form-header">
+          <div class="contact-form-title-1-box">
+            <div class="contact-form-title-1">Contact Us</div>
+          </div>
+          <h2 class="contact-form-title">Get In Touch</h2>
+          <p class="contact-form-subtitle">
+            Ready to elevate your brand presence? Contact us today to discuss
+            how our advertising solutions can help you achieve your marketing
+            goals.
+          </p>
+        </div>
+
+        <div class="contact-form-grid">
+          <!-- Contact Information -->
+          <div class="contact-form-info">
+            <div class="contact-form-box">
+              <h3 class="contact-form-heading">Contact Information</h3>
+              <div class="contact-form-details">
+                <div class="contact-form-item">
+                  <span class="contact-form-icon">
+                    <img src="assets/form1.svg" alt="Location" />
+                  </span>
+                  <div>
+                    <p class="contact-form-label">Office Address</p>
+                    <p class="contact-form-text">
+                      Marina Bay Financial Centre,<br />Singapore 018981
+                    </p>
+                  </div>
+                </div>
+                <div class="contact-form-item">
+                  <span class="contact-form-icon">
+                    <img src="assets/form2.svg" alt="Email" />
+                  </span>
+                  <div>
+                    <p class="contact-form-label">Email Us</p>
+                    <a
+                      href="mailto:hello@noblemistmedia.com.sg"
+                      class="contact-form-link"
+                    >
+                      hello@noblemistmedia.com.sg
+                    </a>
+                  </div>
+                </div>
+                <div class="contact-form-item">
+                  <span class="contact-form-icon">
+                    <img src="assets/form3.svg" alt="Phone" />
+                  </span>
+                  <div>
+                    <p class="contact-form-label">Call Us</p>
+                    <a href="tel:+6591234567" class="contact-form-link">
+                      +65 9123 4567
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-hours-item">
+              <div>
+                <p class="contact-form-hours-title">Business Hours</p>
+                <div class="contact-form-hours-text-box">
+                  <div class="contact-form-hours-text-sub-box">
+                    <p class="contact-form-hours-text">Monday - Friday:</p>
+                    <p class="contact-form-hours-text">9:00 AM - 6:00 PM</p>
+                  </div>
+                  <div class="contact-form-hours-text-sub-box">
+                    <p class="contact-form-hours-text">Saturday:</p>
+                    <p class="contact-form-hours-text">9:00 AM - 1:00 PM</p>
+                  </div>
+                  <div class="contact-form-hours-text-sub-box">
+                    <p class="contact-form-hours-text">
+                      Sunday & Public Holidays:
+                    </p>
+                    <p class="contact-form-hours-text">Closed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-form">
+            <div class="contact-form-box">
+              <h3 class="contact-form-heading">Send Us a Message</h3>
+              <form  id="contact-form-box">
+                <div class="contact-form-row">
+                  <div>
+                    <label for="name" class="contact-form-label"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Your name"
+                      class="contact-form-input"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="contact-form-label"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="your@email.com"
+                      class="contact-form-input"
+                    />
+                  </div>
+                  <div>
+                    <label for="company" class="contact-form-label"
+                      >Company Name</label
+                    >
+                    <input
+                      type="text"
+                      id="company"
+                      placeholder="Your company"
+                      class="contact-form-input"
+                    />
+                  </div>
+                  <div>
+                    <label for="subject" class="contact-form-label"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      id="subject"
+                      placeholder="How can we help?"
+                      class="contact-form-input"
+                    />
+                  </div>
+                </div>
+                <div class="contact-form-message">
+                  <label for="message" class="contact-form-label"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Your message..."
+                    class="contact-form-textarea"
+                  ></textarea>
+                </div>
+                <button type="submit" class="contact-form-button">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bg">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo-row">
+              <span class="footer-brand">NOBLEMIST MEDIA</span>
+            </div>
+            <p class="footer-text">
+              Transforming spaces into powerful brand experiences through
+              strategic advertising solutions.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-icon">
+                <img src="assets/footer-social-1.svg" alt="Social 1" />
+              </a>
+              <a href="#" class="footer-social-icon">
+                <img src="assets/footer-social-2.svg" alt="Social 2" />
+              </a>
+              <a href="#" class="footer-social-icon">
+                <img src="assets/footer-social-3.svg" alt="Social 3" />
+              </a>
+              <a href="#" class="footer-social-icon">
+                <img src="assets/footer-social-4.svg" alt="Social 4" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-list">
+              <li><a href="#hero" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About Us</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#work" class="footer-link">Our Work</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Brand Identity</a></li>
+              <li><a href="#" class="footer-link">Digital Presence</a></li>
+              <li><a href="#" class="footer-link">Brand Strategy</a></li>
+              <li><a href="#" class="footer-link">Advertising</a></li>
+              <li><a href="#" class="footer-link">Design Services</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-heading">Contact Us</h3>
+            <div class="footer-contact">
+              <div class="footer-contact-item">
+                <div class="footer-contact-item-img footer-contact-loc-img">
+                  <img src="assets/footer-contact-1.svg" alt="Location" />
+                </div>
+                <span>Marina Bay Financial Centre, Singapore 018981</span>
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-contact-item-img">
+                  <img src="assets/footer-contact-2.svg" alt="Email" />
+                </div>
+                <a href="mailto:hello@noblemist.sg" class="footer-link"
+                  >hello@noblemist.sg</a
+                >
+              </div>
+              <div class="footer-contact-item">
+                <div class="footer-contact-item-img">
+                  <img src="assets/footer-contact-3.svg" alt="Phone" />
+                </div>
+                <a href="tel:+6591234567" class="footer-link">+65 9123 4567</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">
+            © <span id="year"></span> NOBLEMIST MEDIA. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script/index.js"></script>
+  </body>
+</html>
