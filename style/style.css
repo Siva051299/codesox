@@ -335,7 +335,7 @@ html {
 }
 
 .section-2-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -370,7 +370,8 @@ html {
 
 .section-2-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
   gap: 2rem;
 }
 
@@ -410,15 +411,19 @@ html {
   color: #030712;
   margin-bottom: 14px;
 }
-
+index.html
 .section-2-card-desc {
   color: #4b5563;
   font-size: 1rem;
 }
 
 /* Section 5 */
+.section-5-section {
+  background-color: #faf5ff;
+}
+
 .section-5 {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0px auto;
   color: white;
   border-radius: 16px;
@@ -494,7 +499,7 @@ html {
 }
 
 .contact-form-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -847,6 +852,7 @@ html {
   text-align: center;
 }
 
+
 .section-4-mb-12 {
   margin-bottom: 3rem;
 }
@@ -956,6 +962,7 @@ html {
   margin-top: 1rem;
 }
 
+
 .section-4-info ul {
   list-style: none;
   padding-left: 1rem;
@@ -990,6 +997,7 @@ html {
   overflow-x: hidden;
 }
 
+
 .platforms-title-1 {
   width: 148px;
   height: 35px;
@@ -1010,9 +1018,10 @@ html {
   max-width: 494px;
   font-size: 2.3rem;
   margin: 0px auto;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   text-align: center;
 }
+
 
 .platforms-des {
   max-width: 600px;
@@ -1072,7 +1081,7 @@ html {
   gap: 32px;
   align-items: stretch;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 4rem auto 0 auto;
   overflow-x: hidden;
