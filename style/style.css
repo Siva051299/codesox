@@ -1968,8 +1968,8 @@ index.html .section-2-card-desc {
 
   /* Header Adjustments */
   .header-logo-img {
-    width: 35px;
-    height: 35px;
+    width: 60px;
+    height: 60px;
   }
 
   .header-logo-text {
@@ -2280,6 +2280,16 @@ index.html .section-2-card-desc {
   .email-tick-item img {
     width: 14px;
     height: 14px;
+  }
+
+  .led-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .led-content-left {
+    width: 100%;
   }
 }
 
