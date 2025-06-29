@@ -339,7 +339,7 @@ const contentMap = {
     ],
     options: [
       {
-        title: "Digital Billboards",
+        title: "Digital Bilboards",
         desc: "High-impact LED displays in prime locations across Singapore.",
       },
       {
@@ -369,6 +369,7 @@ const contentMap = {
         desc: "Schedule different content based on audience demographics.",
       },
     ],
+    
   },
   Billboard: {
     title: "Billboard",
@@ -1312,3 +1313,4 @@ function showFeedback(message, type) {
     feedback.remove();
   }, 5000);
 }
+

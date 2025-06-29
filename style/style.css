@@ -413,8 +413,8 @@ html {
   color: #030712;
   margin-bottom: 14px;
 }
-index.html
-.section-2-card-desc {
+
+index.html .section-2-card-desc {
   color: #4b5563;
   font-size: 1rem;
 }
@@ -426,11 +426,14 @@ index.html
 
 .section-5 {
   max-width: 1400px;
-  margin: 0px auto;
+  margin: 0 auto;
   color: white;
   border-radius: 16px;
   overflow: hidden;
-  background-color: #402b8f;
+  background-image: url("../media/container-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .section-5-container {
@@ -740,7 +743,7 @@ index.html
 
 .footer-list {
   list-style: none;
-  padding: 0;
+  padding: 10px;
 }
 
 .footer-link {
@@ -2405,8 +2408,40 @@ index.html
 }
 
 .srk_card_client_logo img {
+  max-width: 100%;
+  width: 221px;
+  height: 145px;
+}
+
+.srk_team-section {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  overflow: hidden;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.scroll-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 50s linear infinite;
+}
+
+.scroll-content {
+  display: flex;
+}
+
+.scroll-content img {
+  height: 80px;
+  margin: 0 20px;
+  object-fit: contain;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
