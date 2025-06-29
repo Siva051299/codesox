@@ -2441,7 +2441,44 @@ index.html .section-2-card-desc {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
+}
+
+.led-content {
+  width: 100%;
+  display: flex;
+}
+
+.led-content-left {
+  width: 60%;
+}
+
+.led-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.innovative-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.led-specs {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #000000;
+
+}
+
+.led-specs strong {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 5px;
+  color: #000000;
+
 }

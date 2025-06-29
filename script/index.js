@@ -369,7 +369,6 @@ const contentMap = {
         desc: "Schedule different content based on audience demographics.",
       },
     ],
-    
   },
   Billboard: {
     title: "Billboard",
@@ -726,6 +725,8 @@ const contentMap = {
 };
 
 function updatePlatformContent(name) {
+  console.log(name);
+  
   const content = contentMap[name];
   if (!content) return;
 
@@ -892,7 +893,7 @@ function updatePlatformContent(name) {
     return platformBox;
   };
 
-  if (name === "Search Engine") {
+  if (name === "Search Engine") {    
     const optionsContainer = document.createElement("div");
     optionsContainer.className = "search-engine-options-container";
     optionsContainer.style.display = "flex";
@@ -944,7 +945,7 @@ function updatePlatformContent(name) {
 
     textBox.appendChild(optionsContainer);
     textBox.appendChild(benefitsSection);
-  } else if (name === "Display Network") {
+  } else if (name === "Display Network") {  
     const optionsContainer = document.createElement("div");
     optionsContainer.className = "display-network-options-container";
     optionsContainer.style.display = "flex";
@@ -1061,7 +1062,20 @@ function updatePlatformContent(name) {
     videoContent.appendChild(platformsSection);
 
     textBox.appendChild(videoContent);
-  } else {
+
+  }else if(name == "Digital"){
+     const optionsSection = createSection(
+      content.subtitle.title1,
+      content.options
+    );
+    const benefitsSection = createSection(
+      content.subtitle.title2,
+      content.benefits,
+      content.led
+    );
+    textBox.appendChild(optionsSection);
+    textBox.appendChild(benefitsSection);
+  } else {    
     const optionsSection = createSection(
       content.subtitle.title1,
       content.options
