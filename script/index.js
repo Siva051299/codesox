@@ -726,7 +726,12 @@ const contentMap = {
 
 function updatePlatformContent(name) {
   console.log(name);
-  
+  // Toggle LED content visibility
+  const ledContent = document.getElementById("ledContent");
+  if (ledContent) {
+    ledContent.style.display = name === "Digital" ? "flex" : "none";
+  }
+
   const content = contentMap[name];
   if (!content) return;
 
@@ -748,14 +753,13 @@ function updatePlatformContent(name) {
 
   const textBox = document.querySelector(".platforms-content-left-text-box");
   textBox.innerHTML = "";
-  textBox.className = `platforms-content-left-text-box ${
-    name === "Search Engine" ||
-    name === "Display Network" ||
-    name === "Email Marketing" ||
-    name === "Video Advertising"
+  textBox.className = `platforms-content-left-text-box ${name === "Search Engine" ||
+      name === "Display Network" ||
+      name === "Email Marketing" ||
+      name === "Video Advertising"
       ? "search-engine-text-box"
       : ""
-  }`;
+    }`;
 
   const createSection = (title, items, includeDesc = false, iconSrc = null) => {
     const section = document.createElement("div");
@@ -830,10 +834,9 @@ function updatePlatformContent(name) {
     const benefitBox = document.createElement("div");
     benefitBox.className = "benefit-box";
     benefitBox.innerHTML = `
-      ${
-        iconSrc
-          ? `<div class="srk_icon_bg"><img src="${iconSrc}" alt="${title} icon" class="benefit-icon"></div>`
-          : ""
+      ${iconSrc
+        ? `<div class="srk_icon_bg"><img src="${iconSrc}" alt="${title} icon" class="benefit-icon"></div>`
+        : ""
       }
       <div class="platforms-content-left-text-box-title">${title}</div>
       <div class="platforms-content-left-tick-text-2">${desc}</div>
@@ -845,22 +848,21 @@ function updatePlatformContent(name) {
     const sectionBox = document.createElement("div");
     sectionBox.className = "email-section-box";
     sectionBox.innerHTML = `
-      <div class="srk_icon_bg"><img src="${section.svg}" alt="${
-      section.heading
-    } icon" class="email-section-icon"></div>
+      <div class="srk_icon_bg"><img src="${section.svg}" alt="${section.heading
+      } icon" class="email-section-icon"></div>
       <div class="email-section-heading">${section.heading}</div>
       <p class="email-section-desc">${section.description}</p>
       <ul class="email-tick-list">
         ${section.items
-          .map(
-            (item) => `
+        .map(
+          (item) => `
           <li class="email-tick-item">
             <img src="assets/Icon (1).svg" alt="Checkmark">
             ${item.title}
           </li>
         `
-          )
-          .join("")}
+        )
+        .join("")}
       </ul>
     `;
     return sectionBox;
@@ -893,7 +895,7 @@ function updatePlatformContent(name) {
     return platformBox;
   };
 
-  if (name === "Search Engine") {    
+  if (name === "Search Engine") {
     const optionsContainer = document.createElement("div");
     optionsContainer.className = "search-engine-options-container";
     optionsContainer.style.display = "flex";
@@ -945,7 +947,7 @@ function updatePlatformContent(name) {
 
     textBox.appendChild(optionsContainer);
     textBox.appendChild(benefitsSection);
-  } else if (name === "Display Network") {  
+  } else if (name === "Display Network") {
     const optionsContainer = document.createElement("div");
     optionsContainer.className = "display-network-options-container";
     optionsContainer.style.display = "flex";
@@ -1063,8 +1065,8 @@ function updatePlatformContent(name) {
 
     textBox.appendChild(videoContent);
 
-  }else if(name == "Digital"){
-     const optionsSection = createSection(
+  } else if (name == "Digital") {
+    const optionsSection = createSection(
       content.subtitle.title1,
       content.options
     );
@@ -1075,7 +1077,7 @@ function updatePlatformContent(name) {
     );
     textBox.appendChild(optionsSection);
     textBox.appendChild(benefitsSection);
-  } else {    
+  } else {
     const optionsSection = createSection(
       content.subtitle.title1,
       content.options
@@ -1109,8 +1111,7 @@ function renderButtons(platformArray, defaultSelectedName) {
     const isActive = platform.name === defaultSelectedName;
     if (isActive) button.classList.add("active");
     button.innerHTML = `
-      <img src="${
-        isActive ? platform.activeIcon : platform.defaultIcon
+      <img src="${isActive ? platform.activeIcon : platform.defaultIcon
       }" alt="${platform.name}" />
       ${platform.name}
     `;
@@ -1129,13 +1130,13 @@ function renderButtons(platformArray, defaultSelectedName) {
     });
     buttonBox.appendChild(button);
   });
-  if(defaultSelectedName == "Social Media") {
+  if (defaultSelectedName == "Social Media") {
     const element = document.querySelector('[data-name="Social Media"]');
     if (element) {
       element.click();
     }
   }
-  if(defaultSelectedName == "Bus") {
+  if (defaultSelectedName == "Bus") {
     const element = document.querySelector('[data-name="Bus"]');
     if (element) {
       element.click();
@@ -1236,7 +1237,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Basic validation
     if (!name || !email || !subject || !message) {
       showFeedback("Please fill in all required fields (Name, Email, Subject, Message).", "error");
-     
+
       return;
     }
 
@@ -1272,7 +1273,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         showFeedback("Your message has been sent successfully!", "success");
         contactForm.reset();
-       
+
       } else {
         const errorData = await response.json().catch(() => ({}));
         showFeedback(`Failed to send message: ${errorData.message || "Unknown error"}`, "error");

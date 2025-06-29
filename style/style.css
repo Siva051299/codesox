@@ -2450,6 +2450,7 @@ index.html .section-2-card-desc {
 .led-content {
   width: 100%;
   display: flex;
+  align-items: center;
 }
 
 .led-content-left {
