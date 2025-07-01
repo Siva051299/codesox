@@ -1704,12 +1704,17 @@ index.html .section-2-card-desc {
   font-weight: 500;
 }
 
+  @media (max-width: 768px) {
+    .navbar-nav {
+      margin-bottom: 20px !important;
+    }
+    .flex-direc {
+      flex-direction: column !important;
+    }
+  }
+  
 /* Responsive Media Queries */
 @media (min-width: 768px) {
-  .flex-direc{
-    flex-direction: column !important;
-    background-color: red !important;
-  }
   .section-2-grid {
     grid-template-columns: none !important;
   }
