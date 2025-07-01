@@ -370,11 +370,24 @@ html {
   color: #4b5563;
 }
 
-.section-2-grid {
+/* .section-2-grid {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
   grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
   gap: 2rem;
+} */
+
+.section-2-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.section-2-card {
+  flex: 1 1 440px;
+  max-width: 100%;
+  min-width: 280px;
+  box-sizing: border-box;
 }
 
 .section-2-card {
@@ -422,6 +435,7 @@ index.html .section-2-card-desc {
 /* Section 5 */
 .section-5-section {
   background-color: #faf5ff;
+  padding: 20px;
 }
 
 .section-5 {
@@ -1692,6 +1706,14 @@ index.html .section-2-card-desc {
 
 /* Responsive Media Queries */
 @media (min-width: 768px) {
+  .flex-direc{
+    flex-direction: column !important;
+    background-color: red !important;
+  }
+  .section-2-grid {
+    grid-template-columns: none !important;
+  }
+
   .section-1-grid-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -1847,6 +1869,7 @@ index.html .section-2-card-desc {
     min-width: 0;
     width: 100%;
     text-align: left;
+    flex: unset;
   }
 
   .benefit-box .platforms-content-left-text-box-title {
@@ -2460,36 +2483,51 @@ index.html .section-2-card-desc {
 .led-content {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  background-color: #F9FAFB;
+  padding: 30px 40px;
+  border-radius: 16px;
 }
 
 .led-content-left {
-  width: 60%;
+  /* width: 60%; */
 }
 
 .led-text {
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .innovative-text {
   font-size: 16px;
   font-weight: 400;
+  font-family: inter;
   line-height: 24px;
+  color: #4B5563;
 }
 
 .led-specs {
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 20px;
-  color: #000000;
-
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  color: #000;
+  line-height: 1.5;
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
-.led-specs strong {
-  font-size: 16px;
-  font-weight: 500;
-  margin-right: 5px;
-  color: #000000;
+.spec-row {}
 
+.spec-row .label {
+  width: 150px;
+  font-weight: bold;
+  background-color: unset;
+  margin-bottom: 0px;
+  padding: 10px 0px;
+  color: black;
+}
+
+.value {
+  flex: 1;
 }
