@@ -1891,6 +1891,7 @@ index.html .section-2-card-desc {
     gap: 20px;
     padding: 10px;
     overflow-x: hidden;
+    flex-direction: column;
   }
 
   .display-network-services {

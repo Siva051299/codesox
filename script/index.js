@@ -725,7 +725,6 @@ const contentMap = {
 };
 
 function updatePlatformContent(name) {
-  console.log(name);
   // Toggle LED content visibility
   const ledContent = document.getElementById("ledContent");
   if (ledContent) {
@@ -1088,6 +1087,10 @@ function updatePlatformContent(name) {
     );
     textBox.appendChild(optionsSection);
     textBox.appendChild(benefitsSection);
+  }
+
+  if(name === "Influencer Marketing"){
+    $(".platforms-content-left-img-container").after($("#influmencerMarketingSection").html());
   }
 
   const quoteButton = document.createElement("button");
