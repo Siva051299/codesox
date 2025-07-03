@@ -466,14 +466,14 @@ index.html .section-2-card-desc {
 
 .section-5-text {
   padding: 4rem 4rem;
-  padding-right: 0rem;
+  /* padding-right: 0rem; */
 }
 
 /* Text Section Styling */
 .section-5-heading {
   font-size: 2rem;
   font-weight: bold;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   margin-bottom: 1.5rem;
 }
 
@@ -1288,7 +1288,7 @@ index.html .section-2-card-desc {
   font-size: 1rem;
   margin-top: 2px;
   color: #4b5563;
-  max-width: 345px;
+  /* max-width: 345px; */
   text-align: left;
 }
 
@@ -2537,3 +2537,56 @@ index.html .section-2-card-desc {
 .value {
   flex: 1;
 }
+
+
+ .srk_software-section {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .srk_software-section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .srk_software-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* gap: 30px; */
+      justify-items: center;
+    }
+
+    .srk_software-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .srk_software-icon {
+      border-radius: 12px;
+    }
+
+    .srk_software-icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .srk_software-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .srk_software-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .content{
+        margin-left: 0px !important;
+      }
+    }

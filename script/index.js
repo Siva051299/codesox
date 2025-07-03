@@ -684,7 +684,7 @@ const contentMap = {
   "Live Streaming": {
     title: "Live Streaming",
     titleImg: "assets/blue-live.svg",
-    subtitle: { title1: "Live Streaming Services", title2: "Benefits" },
+    subtitle: { title1: "Live Streaming Services", title2: "Software We Work With" },
     description:
       "Engage your audience in real-time with live streaming campaigns:",
     arr: [
@@ -725,6 +725,7 @@ const contentMap = {
 };
 
 function updatePlatformContent(name) {
+    $("#removeThisDiv").remove();
   // Toggle LED content visibility
   const ledContent = document.getElementById("ledContent");
   if (ledContent) {
@@ -1064,6 +1065,93 @@ function updatePlatformContent(name) {
 
     textBox.appendChild(videoContent);
 
+  } else if(name === "Live Streaming"){
+    const liveStreamContent = `  <div class="platforms-content-left-text-box ">
+    <div class="platforms-content-left-text-box-1">
+      <div class="section-title-container" style="display: flex; align-items: center; gap: 14px;">
+        <div class="platforms-content-left-text-box-title">Live Streaming Services</div>
+      </div>
+      <div class="stacked-items-container">
+        <div class="platforms-content-left-tick-text-box">
+          <div><img src="assets/Icon (1).svg" alt="Checkmark"></div>
+          <div>
+            <div class="platforms-content-left-tick-text-1">Multi-Platform Broadcasting</div>
+            <div class="platforms-content-left-tick-text-2">Simultaneously stream to YouTube, Facebook, Instagram, and other platforms to maximize your reach.</div>
+          </div>
+        </div>
+        <div class="platforms-content-left-tick-text-box">
+          <div><img src="assets/Icon (1).svg" alt="Checkmark"></div>
+          <div>
+            <div class="platforms-content-left-tick-text-1">Professional Production</div>
+            <div class="platforms-content-left-tick-text-2">High-quality equipment, multiple camera setups, and expert production team for polished broadcasts.
+            </div>
+          </div>
+        </div>
+        <div class="platforms-content-left-tick-text-box">
+          <div><img src="assets/Icon (1).svg" alt="Checkmark"></div>
+          <div>
+            <div class="platforms-content-left-tick-text-1">Interactive Features</div>
+            <div class="platforms-content-left-tick-text-2">Real-time audience engagement with Q&A, polls, and interactive elements to boost participation.
+            </div>
+          </div>
+        </div>
+        <div class="platforms-content-left-tick-text-box">
+          <div><img src="assets/Icon (1).svg" alt="Checkmark"></div>
+          <div>
+            <div class="platforms-content-left-tick-text-1">Wedding Video Streaming</div>
+            <div class="platforms-content-left-tick-text-2">Share your special day with loved ones who can't attend in person with our dedicated wedding streaming service.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="platforms-content-left-text-box-1">
+      <div class="section-title-container" style="display: flex; align-items: center; gap: 14px;">
+        <div class="platforms-content-left-text-box-title">Software We Work With</div>
+      </div>
+      <div class="srk_software-section">
+        <div class="srk_software-grid">
+          <div class="srk_software-item">
+            <div class="srk_software-icon">
+              <img src="assets/steam_icon.png" alt="Steam">
+            </div>
+            <div class="srk_software-name">Steam</div>
+          </div>
+          <div class="srk_software-item">
+            <div class="srk_software-icon">
+              <img src="assets/streamlab_icon.png" alt="Streamlabs">
+            </div>
+            <div class="srk_software-name">Streamlabs</div>
+          </div>
+          <div class="srk_software-item">
+            <div class="srk_software-icon">
+              <img src="assets/wirecast_icon.png" alt="Wirecast">
+            </div>
+            <div class="srk_software-name">Wirecast</div>
+          </div>
+          <div class="srk_software-item">
+            <div class="srk_software-icon">
+              <img src="assets/vmix_icon.png" alt="vMix">
+            </div>
+            <div class="srk_software-name">vMix</div>
+          </div>
+          <div class="srk_software-item">
+            <div class="srk_software-icon">
+              <img src="assets/xsplit_icon.png" alt="XSplit">
+            </div>
+            <div class="srk_software-name">XSplit</div>
+          </div>
+          <div class="srk_software-item">
+            <div class="srk_software-icon">
+              <img src="assets/restream_icon.png" alt="Restream">
+            </div>
+            <div class="srk_software-name">Restream</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`
+    $(".platforms-content-left-img-container").after(liveStreamContent)
   } else if (name == "Digital") {
     const optionsSection = createSection(
       content.subtitle.title1,
@@ -1090,7 +1178,37 @@ function updatePlatformContent(name) {
   }
 
   if(name === "Influencer Marketing"){
-    $(".platforms-content-left-img-container").after($("#influmencerMarketingSection").html());
+    // alert("inf")
+    // $("#influmencerMarketingSection").removeClass("d-none");
+    const influContent = `<div class="platforms-content-left-text-box-1 search-engine-box" id="removeThisDiv" style="margin-top: 40px;">
+    <div class="platforms-content-left-text-box-title benefits-title">Our Influencer Marketing Approach</div>
+    <div class="benefits-container" style="flex-direction: row;">
+      <div class="benefit-box">
+        <div class="srk_icon_bg"><img src="assets/Influencer_Discovery.png" alt="Influencer Discovery icon" class="benefit-icon"></div>
+        <div class="platforms-content-left-text-box-title">Influencer Discovery</div>
+        <div class="platforms-content-left-tick-text-2">Finding the perfect influencers who align with your brand values.
+        </div>
+      </div>
+      <div class="benefit-box">
+        <div class="srk_icon_bg"><img src="assets/Campaign_Planning.png" alt="Campaign Planning icon" class="benefit-icon">
+        </div>
+        <div class="platforms-content-left-text-box-title">Campaign Planning</div>
+        <div class="platforms-content-left-tick-text-2">Developing strategic campaigns with clear objectives.</div>
+      </div>
+      <div class="benefit-box">
+        <div class="srk_icon_bg"><img src="assets/Relationship_Management.png" alt="Relationship Management icon" class="benefit-icon"></div>
+        <div class="platforms-content-left-text-box-title">Relationship Management</div>
+        <div class="platforms-content-left-tick-text-2">Building and maintaining strong influencer partnerships.</div>
+      </div>
+       <div class="benefit-box">
+        <div class="srk_icon_bg"><img src="assets/Performance_Tracking.png" alt="Performance Tracking icon" class="benefit-icon"></div>
+        <div class="platforms-content-left-text-box-title">Performance Tracking</div>
+        <div class="platforms-content-left-tick-text-2">Measuring campaign results and ROI.</div>
+      </div>
+    </div>
+  </div>`
+    $(".platforms-content-left-img-container").after(influContent);
+    // $(".platforms-content-left-img-container").after($("#influmencerMarketingSection").html());
   }
 
   const quoteButton = document.createElement("button");
